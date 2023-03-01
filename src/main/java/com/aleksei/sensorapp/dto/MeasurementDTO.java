@@ -17,16 +17,8 @@ public class MeasurementDTO {
     private Double value;
     @NotNull
     private Boolean raining;
-    @NotNull
-    private LocalDateTime measurementDateTime;
     @ManyToOne
     @JoinColumn(name = "sensor", referencedColumnName = "name")
     private SensorDTO sensor;
 
-    public MeasurementDTO(double value, boolean raining, LocalDateTime measurementDateTime, SensorDTO sensor) {
-        this.value = value;
-        this.raining = raining;
-        this.measurementDateTime = measurementDateTime;
-        this.sensor = sensor;
-    }
 }

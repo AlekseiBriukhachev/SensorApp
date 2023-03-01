@@ -53,9 +53,9 @@ public class Client {
         try {
             restTemplate.postForObject(url, request, String.class);
 
-            System.out.println("Измерение успешно отправлено на сервер!");
+            System.out.println("Measurement is sanded successful");
         } catch (HttpClientErrorException e) {
-            System.out.println("ОШИБКА!");
+            System.out.println("ERROR!");
             System.out.println(e.getMessage());
         }
     }
