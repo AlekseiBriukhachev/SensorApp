@@ -10,15 +10,15 @@ import java.util.Random;
 
 public class Client {
     public static void main(String[] args) {
-        final String sensorName = "Sensor123";
+        final String sensorName = "Sensor 253";
         registerSensor(sensorName);
         Random random = new Random();
-        double minTemperature = 0.0;
+
         double maxTemperature = 45.0;
 
-        for (int i = 0; i < 500; i++) {
+        for (int i = 0; i < 1000; i++) {
             System.out.println(i);
-            sendMeasurement(random.nextDouble() * (maxTemperature - minTemperature),
+            sendMeasurement(random.nextDouble() * maxTemperature,
                     random.nextBoolean(), sensorName);
 
         }
