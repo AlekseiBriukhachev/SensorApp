@@ -13,15 +13,15 @@ public class Measurement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private long id;
+    private Integer id;
     @Column(name = "value")
     @NotNull
     @Min(-100)
     @Max(100)
-    private double value;
+    private Double value;
     @Column(name = "raining")
     @NotNull
-    private boolean raining;
+    private Boolean raining;
     @Column(name = "measurement_date_time")
     @NotNull
     private LocalDateTime measurementDateTime;

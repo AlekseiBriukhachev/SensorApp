@@ -19,7 +19,8 @@ import java.util.stream.Collectors;
 
 import static com.aleksei.sensorapp.utils.ErrorsUtil.returnErrorsToClient;
 
-@RestController("/measurements")
+@RestController
+@RequestMapping("/measurements")
 public class MeasurementController {
     private final MeasurementService measurementService;
     private final ModelMapper modelMapper;
@@ -52,7 +53,7 @@ public class MeasurementController {
     @GetMapping("/rainyDaysCount")
     public Long getRainyDaysCount(){
         return measurementService.findAll().stream()
-                .filter(Measurement::isRaining)
+                .filter(Measurement::getRaining)
                 .count();
     }
 
